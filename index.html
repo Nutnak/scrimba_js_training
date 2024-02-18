@@ -8,11 +8,26 @@
   <title>Document</title>
 </head>
 <body>
+
+<h1 id="count_people">0</h1>
+<button onclick="add_people()">Add</button>
+<button onclick="remove_people()">Remove</button>
+
   <script>
 
-    let nombre = 0;
+    let total = 0;
 
-    console.log(nombre)
+    let save = document.getElementById('count_people');
+
+    function add_people() {
+      total += 1;
+      save.innerHTML = total
+    }
+
+    function remove_people() {
+      total -= 1;
+      save.innerHTML = total
+    }
 
   </script>
 
